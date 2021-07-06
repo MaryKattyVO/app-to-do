@@ -21,13 +21,12 @@ export class Tab1Page {
    
     const alert = await this.alertCtrl.create({
       cssClass: 'my-custom-class',
-      header: 'Nueva lista',
+      header: 'Nueva Tarea',
       inputs: [
         {
           name: 'titulo',
           type: 'text', 
-          value: '123',
-          placeholder: 'Nombre de la lista'
+          placeholder: 'Nombre de la Tarea'
         }
       ],
       buttons: [ 
@@ -35,13 +34,13 @@ export class Tab1Page {
           text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            console.log('Cancelar');
+            // console.log('Cancelar');
           }
         },
         {
           text: 'Crear',
           handler: (data) => {
-            console.log(data);
+            // console.log(data);
             if( data.titulo.length === 0) {
               return;
             }
@@ -57,7 +56,7 @@ export class Tab1Page {
   }
 
   listaSeleccionada( lista: Lista ) {
-    console.log(lista)
+    // console.log(lista)
     this.router.navigateByUrl(`tabs/tab1/agregar/${lista.id}`);
   }
 

@@ -26,7 +26,7 @@ export class ListasComponent implements OnInit {
     } else {
       this.router.navigateByUrl(`tabs/tab1/agregar/${lista.id}`);
     }
-    console.log(lista)
+    // console.log(lista)
   }
   borrarLista(lista: Lista) {
     this.deseosService.borrarLista(lista);
@@ -49,14 +49,14 @@ export class ListasComponent implements OnInit {
           text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            console.log('Cancelar');
+            // console.log('Cancelar');
             this.lista.closeSlidingItems();
           }
         },
         {
           text: 'Actualizar',
           handler: (data) => {
-            console.log(data);
+            // console.log(data);
             if( data.titulo.length === 0) {
               return;
             }

@@ -16,7 +16,7 @@ export class AgregarPage implements OnInit {
                private route: ActivatedRoute) { 
     const listaId = this.route.snapshot.paramMap.get('listaId');
     this.lista = this.deseosService.obtenerLista(listaId);
-    console.log(this.lista);
+    // console.log(this.lista);
   }
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class AgregarPage implements OnInit {
   }
 
   cambioCheck( item: ListaItem ) {
-    console.log(item);
+    // console.log(item);
     const pendientes =  this.lista.items
                         .filter(itemData => !itemData.completado)
                         .length;
@@ -46,10 +46,10 @@ export class AgregarPage implements OnInit {
       this.lista.terminada = false;
     }
 
-    console.log({pendientes});
+    // console.log({pendientes});
     this.deseosService.guardarStorage();
 
-    console.log(this.deseosService.listas);
+    // console.log(this.deseosService.listas);
   }
 
   borrar(i: number) {
