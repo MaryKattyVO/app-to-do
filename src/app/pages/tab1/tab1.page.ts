@@ -26,6 +26,7 @@ export class Tab1Page {
         {
           name: 'titulo',
           type: 'text', 
+          value: '123',
           placeholder: 'Nombre de la lista'
         }
       ],
